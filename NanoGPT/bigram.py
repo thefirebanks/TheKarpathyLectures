@@ -219,8 +219,8 @@ class Block(nn.Module):
         return x
 
 
-# Bigram language model with self-attention!
-class BigramLanguageModelWithAttention(nn.Module):
+# Language model with self-attention!
+class LanguageModelWithAttention(nn.Module):
     def __init__(self):
         super().__init__()
         # each token directly reads off the logits for the next token from a lookup table
@@ -300,7 +300,7 @@ class BigramLanguageModelWithAttention(nn.Module):
         return idx
 
 
-model = BigramLanguageModelWithAttention()
+model = LanguageModelWithAttention()
 model = model.to(device)
 
 # Create an optimizer
